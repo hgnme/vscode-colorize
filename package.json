@@ -1,9 +1,9 @@
 {
-  "name": "vscode-colorize",
+  "name": "vscode-colorize-hgn",
   "displayName": "colorize",
-  "description": "A vscode extension to help visualize css colors in files.",
+  "description": "A vscode extension to help visualize css colors in files. hgn branch",
   "version": "0.11.1",
-  "publisher": "kamikillerto",
+  "publisher": "hgnme",
   "license": "Apache-2.0",
   "icon": "assets/logo.png",
   "engines": {
@@ -22,12 +22,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kamikillerto/vscode-colorize.git"
+    "url": "https://github.com/hgnme/vscode-colorize.git"
   },
   "bugs": {
-    "url": "https://github.com/kamikillerto/vscode-colorize/issues"
+    "url": "https://github.com/hgnme/vscode-colorize/issues"
   },
-  "homepage": "https://github.com/kamikillerto/vscode-colorize/blob/master/README.MD",
+  "homepage": "https://github.com/hgnme/vscode-colorize/blob/master/README.MD",
   "galleryBanner": {
     "theme": "light"
   },
@@ -176,7 +176,7 @@
           "title": "Enable the search for variables at opening time",
           "default": true,
           "type": "boolean",
-          "markdownDescription": "When vscode starts, Colorize fetch all files targeted by the settings `colorize.include` and `colorize.languages` but not the ones targeted by the setting `colorize.exclude`. When the fetch is done, colorize open and parse all files searching for variables. That way variables will be colorized in every files. _⚠️ this setting can slown down your editor a little at opening time, read this [issue](https://github.com/KamiKillertO/vscode-colorize/issues/174) to learn more about it._"
+          "markdownDescription": "When vscode starts, Colorize fetch all files targeted by the settings `colorize.include` and `colorize.languages` but not the ones targeted by the setting `colorize.exclude`. When the fetch is done, colorize open and parse all files searching for variables. That way variables will be colorized in every files. _⚠️ this setting can slown down your editor a little at opening time, read this [issue](https://github.com/hgnme/vscode-colorize/issues/174) to learn more about it._"
         }
       }
     }
