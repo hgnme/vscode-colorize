@@ -9,12 +9,14 @@ export const REGEXP_ONE = new RegExp(`^(${HEXA_PREFIX}(?:${HEXA_VALUE}{3,4}|${HE
 
 
 function extractRGB(values: number[]): [number, number, number] {
-  let rgb = values.slice(0, 6);
+  // MIB uses colors in BGR, not RGB.
+  // For the purposes of MIB dev, flip Red/Blue
+  let rgb = values.slice(2, 8);
   if (values.length === 3 || values.length === 4) {
     const _rgb = values.slice(0, 3);
     rgb = [_rgb[0], _rgb[0], _rgb[1], _rgb[1], _rgb[2], _rgb[2]];
   }
-  return [16 * rgb[0] + rgb[1], 16 * rgb[2] + rgb[3], 16 * rgb[4] + rgb[5]];
+  return [16 * rgb[4] + rgb[5], 16 * rgb[2] + rgb[3], 16 * rgb[0] + rgb[1]];
 }
 
 function extractAlpha(values: number[]): number {
@@ -23,7 +25,7 @@ function extractAlpha(values: number[]): number {
     return ((16 * alpha) + alpha) / 255;
   }
   if (values.length === 8) {
-    const alpha = values.slice(6, 8);
+    const alpha = values.slice(0, 2);
     return ((16 * alpha[0]) + alpha[1]) / 255;
   }
   return 1;
